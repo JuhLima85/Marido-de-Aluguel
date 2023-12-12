@@ -1,0 +1,13 @@
+.sb-topnav {
+    background-color:#FFC0CB;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.navbar-brand span {
+    color: #2f86e2;
+}

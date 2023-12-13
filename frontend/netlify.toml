@@ -1,0 +1,8 @@
+# netlify.toml
+
+# Configuração das regras de redirecionamento
+[[redirects]]
+  # Redireciona todas as solicitações para o index.html
+  from = "/*"
+  to = "/index.html"
+  status = 200

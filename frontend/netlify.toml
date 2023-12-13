@@ -1,5 +1,10 @@
 # netlify.toml
 
+[build]
+  publish = "frontend/dist/clientes-app"
+  command = "node_modules/.bin/ng build --configuration=production"
+
+
 # Configuração das regras de redirecionamento
 [[redirects]]
   # Redireciona todas as solicitações para o index.html

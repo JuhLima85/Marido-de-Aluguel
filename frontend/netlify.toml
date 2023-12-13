@@ -2,7 +2,7 @@
 
 [build]
   publish = "frontend/dist/clientes-app"
-  command = "ng build --configuration=production"
+  command = "npm install && ng build --configuration=production"
 
 
 # Configuração das regras de redirecionamento

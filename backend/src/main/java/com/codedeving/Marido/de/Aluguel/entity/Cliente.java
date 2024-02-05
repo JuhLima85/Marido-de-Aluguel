@@ -58,6 +58,19 @@ public class Cliente implements Serializable{
 	@PrePersist
 	public void prePersist() {
 		setDataCadastro(LocalDate.now());
-	}			
+	}
+
+	// usado no teste
+	public Cliente(Integer id, @NotEmpty(message = "{campo.nome.obrigatorio}") String nome,
+			@NotNull(message = "{campo.cpf.obrigatorio}") @CPF(message = "{campo.cpf.invalido}") String cpf,
+			@NotEmpty(message = "{campo.endereco.obrigatorio}") String endereco,
+			@NotEmpty(message = "{campo.telefone.obrigatorio}") String telefone) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.endereco = endereco;
+		this.telefone = telefone;
+	}
 
 }

@@ -60,7 +60,7 @@ public class Cliente implements Serializable{
 		setDataCadastro(LocalDate.now());
 	}
 
-	// usado no teste
+	// usado no teste do cliente
 	public Cliente(Integer id, @NotEmpty(message = "{campo.nome.obrigatorio}") String nome,
 			@NotNull(message = "{campo.cpf.obrigatorio}") @CPF(message = "{campo.cpf.invalido}") String cpf,
 			@NotEmpty(message = "{campo.endereco.obrigatorio}") String endereco,
@@ -73,4 +73,16 @@ public class Cliente implements Serializable{
 		this.telefone = telefone;
 	}
 
+	// usado no teste do controller
+	public Cliente(@NotEmpty(message = "{campo.nome.obrigatorio}") String nome,
+			@NotNull(message = "{campo.cpf.obrigatorio}") @CPF(message = "{campo.cpf.invalido}") String cpf,
+			LocalDate dataCadastro, @NotEmpty(message = "{campo.endereco.obrigatorio}") String endereco,
+			@NotEmpty(message = "{campo.telefone.obrigatorio}") String telefone) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.dataCadastro = dataCadastro;
+		this.endereco = endereco;
+		this.telefone = telefone;
+	}
 }

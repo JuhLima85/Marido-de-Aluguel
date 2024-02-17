@@ -45,7 +45,26 @@ public class ServicoPrestado implements Serializable {
 	private BigDecimal total;
 
 	@Column
-	@JsonFormat(pattern = "dd/MM/YYYY")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate data;
+
+	//Usado nos testes
+	public ServicoPrestado(Integer id, String descricao, Cliente cliente, BigDecimal valor, LocalDate data) {
+		super();
+		this.id = id;
+		this.descricao = descricao;
+		this.cliente = cliente;
+		this.valor = valor;
+		this.data = data;
+	}	
+	
+	//Usado nos testes
+		public ServicoPrestado(String descricao, Cliente cliente, BigDecimal valor, LocalDate data) {
+			super();			
+			this.descricao = descricao;
+			this.cliente = cliente;
+			this.valor = valor;
+			this.data = data;
+		}
 
 }

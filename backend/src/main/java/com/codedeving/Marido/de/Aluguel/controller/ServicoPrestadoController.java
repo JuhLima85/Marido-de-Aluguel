@@ -49,7 +49,8 @@ public class ServicoPrestadoController {
 		ServicoPrestado servicoPrestado = ServicoPrestado.builder().descricao(dto.getDescricao())
 				.valor(bigDecimalConverter.converter(dto.getPreco()))
 				.total(bigDecimalConverter.converter(dto.getTotal()))
-				.data(LocalDate.parse(dto.getData(), DateTimeFormatter.ofPattern("dd/MM/yyyy"))).cliente(cliente)
+				.data(LocalDate.parse(dto.getData(), DateTimeFormatter.ofPattern("dd/MM/yyyy")))
+				.cliente(cliente)
 				.build();
 
 		return repository.save(servicoPrestado);

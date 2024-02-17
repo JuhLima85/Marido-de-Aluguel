@@ -26,6 +26,8 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 				.antMatchers("/api/auth/login").permitAll().antMatchers("/api/auth/register").permitAll()
 				.antMatchers("/api/auth/update").permitAll()
 				.antMatchers(HttpMethod.GET, "/api/servicos-prestados/{clienteId}").hasRole("ADMIN")
+				.antMatchers(HttpMethod.GET, "/api/servicos-prestados").hasRole("ADMIN") // para a classe teste ter acesso
+				.antMatchers(HttpMethod.POST, "/api/servicos-prestados").hasRole("ADMIN") // para a classe teste ter acesso
 				.antMatchers("/api/clientes/**", "/api/servicos-prestados/**").hasRole("USER").anyRequest().denyAll();
 	}
 

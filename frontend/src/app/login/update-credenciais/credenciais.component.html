@@ -1,0 +1,56 @@
+<div class="pai text-center my-5 mx-auto col-12 col-md-8">
+    <div class="container">       
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-5">                       
+                        <div class="row">                            
+                            <div class="col-lg-6 ">
+                                <div class="p-0">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Olá, {{ usuarioLogado}} !</h1>                                        
+                                    </div> 
+                                    <div class="alert alert-success" *ngIf="mensagemSucesso">
+                                        {{ mensagemSucesso }}
+                                    </div>                                                                     
+                                    <div class="alert alert-danger"  *ngFor="let erro of errors">                                       
+                                        {{ erro }}
+                                    </div>                                                                  
+                                    <form #loginForm="ngForm" (submit)="onSubmit();">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user"
+                                            name="username"  [(ngModel)]="dadosAtualizacao.userAtualLogin" autocomplete="off" aria-describedby="emailHelp"
+                                                placeholder="Digite seu novo login.">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user" name="password" [(ngModel)]="dadosAtualizacao.userAtualPassword"
+                                                placeholder="Digite sua nova senha.">
+                                            </div> 
+                                            <div>
+                                                <label for="roles">Perfil:</label>
+                                                {{ role }}
+                                              </div>    
+                                              <input type="hidden" name="userId" [(ngModel)]="dadosAtualizacao.userId">                                     
+                                        <hr>                                    
+                                        <button type="button" class="btn btn-primary btn-user btn-block" (click)="atualizar()"> 
+                                            Atualizar
+                                        </button>     
+                                        <button type="button" (click)="cancelarCadastro($event)"
+                                        class="btn btn-danger btn-user btn-block" > 
+                                            Cancelar
+                                        </button>                                                                          
+                                    </form>                                   
+                                </div>
+                            </div>                              
+                            <div class="col-lg-6 mt-5 d-none d-lg-block" >
+                                <h4 class="text-center font-weight-light my-4">
+                                    Ao atualizar suas credenciais, você será direcionado para a tela de login.
+                                </h4>                               
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

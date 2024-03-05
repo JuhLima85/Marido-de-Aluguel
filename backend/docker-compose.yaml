@@ -1,0 +1,77 @@
+#Usar somente o banco de dados
+#version: "3"
+#services:        
+#  mysqldb:
+#    image: mysql
+#    container_name: containerMysql
+#    restart: always    
+#    environment:
+#      - MYSQL_DATABASE=testedb
+#      - MYSQL_ROOT_PASSWORD=root
+#    ports:
+#      - "3307:3306"
+#    cap_add:
+#      - SYS_NICE
+
+#Usar bd, aplicação e phpmyadmin
+version: '3'
+
+services:
+  db:
+    image: mysql
+    container_name: containerMysql
+    volumes:
+      - dbbase:/var/lib/mysql  
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: testedb
+    ports:
+      - 3307:3306
+    networks:
+      - apivenda-network
+      
+
+  app:
+    image: appma
+    container_name: containerApp
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
+      - 4200:4200
+    networks:
+      - apivenda-network
+    depends_on:
+      - db
+      
+      
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:    
+     - 8000:80
+    environment:
+     - PMA_ARBITRARY:1
+     - PMA_HOST:db
+     - MYSQL_USERNAME:root
+     - MYSQL_ROOT_PASSWORD:root
+    depends_on:
+      - db
+    networks: 
+      - apivenda-network
+    volumes: 
+      - ./docker/phpmyadmin:/var/lib/phpmyadmin  
+          
+
+networks:
+  apivenda-network:
+    driver: bridge
+    
+volumes:
+  dbbase:     
+  phpmyadmin-data:  
+  
+  # Interface do phpMyAdmin: http://localhost:8000/

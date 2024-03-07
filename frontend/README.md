@@ -1,27 +1,51 @@
-# ClientesApp
+# Marido de Aluguel - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+Este projeto é uma aplicação Angular dedicada ao controle e cadastro de clientes e serviços prestados. Este sistema também integra recursos essenciais, como um robusto sistema de login para autenticação de usuários, proteção de rotas utilizando o AuthGuard, e um Interceptor HTTP para garantir a inclusão adequada do token de autenticação em todas as requisições.
 
-## Development server
+URL da Aplicação: https://maridodealuguel.netlify.app/login
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Comandos
+```bash
+## Instalação de Dependências
+npm install
 
-## Code scaffolding
+## Iniciar o Servidor 
+ng serve
+````
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tela Login
+![Login](https://github.com/JuhLima85/Marido_de_Aluguel-ANGULAR/assets/89745459/3ca76698-563c-4ee6-a101-3928ef7d42e6)
 
-## Build
+## Tela Criar Usuário
+![Criar Usuario](https://github.com/JuhLima85/Marido_de_Aluguel-ANGULAR/assets/89745459/b1d414d0-07e9-428f-8cd5-ab6bc789917b)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Tela Configuração
+![Configuracao](https://github.com/JuhLima85/Marido_de_Aluguel-ANGULAR/assets/89745459/1dc15035-1610-4b9d-be24-1e966b68ef28)
 
-## Running unit tests
+## Tela Home
+![Home](https://github.com/JuhLima85/Marido_de_Aluguel-ANGULAR/assets/89745459/f0e3b05c-d10c-4a62-b371-880f693156ce)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Tela Clientes
+![Clientes](https://github.com/JuhLima85/Marido_de_Aluguel-ANGULAR/assets/89745459/85dc0e65-079c-4331-be12-ec013bad1545)
 
-## Running end-to-end tests
+## Tela Edição de Cliente
+![Edicao_Clientes](https://github.com/JuhLima85/Marido_de_Aluguel-ANGULAR/assets/89745459/497b736c-e3bb-4502-9234-87b2bee7890e)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Tela Novo Cliente
+![Novo_Cliente](https://github.com/JuhLima85/Marido_de_Aluguel-ANGULAR/assets/89745459/440ca1fb-c1f9-418f-b4df-5dd158b9805f)
 
-## Further help
+## Tela Histórico de Cliente
+![Historico](https://github.com/JuhLima85/Marido_de_Aluguel-ANGULAR/assets/89745459/a748ef19-ce77-4f5c-b7ab-dbe29348a458)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Tela de Serviços
+![Servicos](https://github.com/JuhLima85/Marido_de_Aluguel-ANGULAR/assets/89745459/86ce442b-3d19-4a33-a9d6-03c914b37d5e)
+
+# Tela Novo Serviço
+![Novo_Servicos](https://github.com/JuhLima85/Marido_de_Aluguel-ANGULAR/assets/89745459/d3e391c8-e412-4b56-94a4-787aa573a855)
+
+# Autora
+Juliana Lima
+
+[![Linkedin](https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://contate.me/Juliana-Lima)
+[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-%E2%9C%88%EF%B8%8F-lightgrey?style=for-the-badge)](https://codedeving.netlify.app/)

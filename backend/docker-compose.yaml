@@ -29,20 +29,19 @@ services:
     ports:
       - 3307:3306
     networks:
-      - apivenda-network
+      - marido-de-aluguel-network
       
 
   app:
-    image: appma
-    container_name: containerApp
+    image: devjuliana/api-marido-de-aluguel
+    container_name: containerAPI
     restart: always
     env_file:
       - .env
     ports:
-      - 8080:8080
-      - 4200:4200
+      - 8080:8080      
     networks:
-      - apivenda-network
+      - marido-de-aluguel-network
     depends_on:
       - db
       
@@ -61,13 +60,13 @@ services:
     depends_on:
       - db
     networks: 
-      - apivenda-network
+      - marido-de-aluguel-network
     volumes: 
       - ./docker/phpmyadmin:/var/lib/phpmyadmin  
           
 
 networks:
-  apivenda-network:
+  marido-de-aluguel-network:
     driver: bridge
     
 volumes:

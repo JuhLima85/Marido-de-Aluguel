@@ -29,11 +29,11 @@ services:
     ports:
       - 3307:3306
     networks:
-      - apivenda-network
+      - marido-de-aluguel-network
       
 
   spring-boot-app:
-    image: appma
+    image: devjuliana/api-marido-de-aluguel
     container_name: containerAPI
     restart: always
     env_file:
@@ -41,18 +41,18 @@ services:
     ports:
       - 8080:8080      
     networks:
-      - apivenda-network
+      - marido-de-aluguel-network
     depends_on:
       - db
       
   angular-app:
-    image: app-angular:3.0
+    image: devjuliana/app-angular-marido-de-aluguel:4.0
     container_name: containerAngular
     restart: always
     ports:
       - 4200:4200  
     networks:
-      - apivenda-network
+      - marido-de-aluguel-network
     depends_on:
       - spring-boot-app
             
@@ -70,13 +70,13 @@ services:
     depends_on:
       - db
     networks: 
-      - apivenda-network
+      - marido-de-aluguel-network
     volumes: 
       - ./docker/phpmyadmin:/var/lib/phpmyadmin  
           
 
 networks:
-  apivenda-network:
+  marido-de-aluguel-network:
     driver: bridge
     
 volumes:

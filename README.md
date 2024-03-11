@@ -21,8 +21,10 @@ A API foi desenvolvida utilizando o framework Spring Boot e segue o padrão MVC 
 
 ### Tecnologias Utilizadas
 - Java 11
+- Hibernate
 - Spring Boot
 - Maven
+- Apache Tomcat
 - RestFUL API
 - Token JWT (JSON Web Token)
 - Banco de Dados MySQL

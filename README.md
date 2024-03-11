@@ -17,10 +17,10 @@ docker-compose up
 
 ## Sobre a API 
 
-API desenvolvida utilizando o framework Spring Boot e tem como objetivo realizar o controle e cadastro de clientes e serviços prestados. Implementa um sistema de segurança que utiliza tokens JWT (JSON Web Token) para proteger os endpoints, garantindo autenticação e autorização. Além disso, possui testes de integração, garantindo a confiabilidade e o correto funcionamento das funcionalidades implementadas.
+A API foi desenvolvida utilizando o framework Spring Boot e segue o padrão MVC (Model-View-Controller). O objetivo é realizar o controle e cadastro de clientes e serviços prestados. Implementa um sistema de segurança que utiliza tokens JWT (JSON Web Token) para proteger os endpoints, garantindo autenticação e autorização. Além disso, possui testes de integração, garantindo a confiabilidade e o correto funcionamento das funcionalidades implementadas.
 
 ### Tecnologias Utilizadas
-- Java
+- Java 11
 - Spring Boot
 - Maven
 - RestFUL API
